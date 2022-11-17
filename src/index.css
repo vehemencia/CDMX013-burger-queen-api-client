@@ -1,19 +1,51 @@
+* {
+ font-size: 62.5%
+}
+
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #805633;
   display: flex;
   justify-content: center;
-}
-h1, h3{
-  color: white;
-}
-.email-input{
- border: none;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.login-content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  gap: 10rem;
 }
+
+#logo-img{
+  width: 36rem;
+  height: auto;
+}
+
+.inputs-div{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.img-div{
+  height: 100%;
+  width: 60%;
+}
+
+#login-text{
+  font-size: 4.5rem;
+}
+
+.login-label{
+  font-size: 2.4rem;
+}
+
