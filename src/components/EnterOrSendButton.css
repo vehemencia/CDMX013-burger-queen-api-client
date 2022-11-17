@@ -1,0 +1,15 @@
+.enter-or-send-button{
+    margin-top: 1.5rem;
+    height: 6rem;
+    width: 27rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #FFFFFF;
+    border-radius: 1rem;
+    border: none;
+    background-color: #CA965C;
+}
+
+.enter-or-send-button:active{
+    background-color: #939B62;
+}
