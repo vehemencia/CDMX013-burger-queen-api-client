@@ -1,5 +1,5 @@
 import './App.css';
-import { Login } from './components/LoginInputs.js';
+import { Login } from './components/LoginInputs/LoginInputs.js';
 
 function App() {
   return (

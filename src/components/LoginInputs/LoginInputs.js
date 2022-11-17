@@ -1,4 +1,4 @@
-import { EnterOrSendButton } from './EnterOrSendButton.js';
+import { EnterOrSendButton } from '../EnterOrSendButton/EnterOrSendButton.js';
 import './LoginInputs.css'
 
 export function Login() {
