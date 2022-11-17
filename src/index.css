@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+  padding: 0;
   font-size: 62.5%;
   font-family: 'Abhaya Libre', serif;
   font-weight: bold;
@@ -6,8 +8,6 @@
 
 body {
   height: 100vh;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   background-color: #805633;
   display: flex;

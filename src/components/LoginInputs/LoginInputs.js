@@ -1,6 +1,5 @@
 import { EnterOrSendButton } from '../EnterOrSendButton/EnterOrSendButton.js';
-import './LoginInputs.css'
-
+import './LoginInputs.css';
 
 export const LoginInputs = () => {
   return (

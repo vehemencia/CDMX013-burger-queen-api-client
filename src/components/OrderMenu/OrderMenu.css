@@ -1,0 +1,21 @@
+#root{
+    height: 100vh;
+    width: 100%;
+}
+
+.menu-display{
+    height: 100vh;
+    width: 100%;
+}
+.header-menu-display{
+    height: 9.6rem;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo-img{
+    height: 6.7rem;
+    width: 12.6rem;
+}
