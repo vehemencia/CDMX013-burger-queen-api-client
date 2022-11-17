@@ -1,9 +1,9 @@
 import './App.css';
-import { Login } from './components/LoginInputs/LoginInputs.js';
+import { LoginInputs } from './components/LoginInputs/LoginInputs.js';
 
 function App() {
   return (
-      <Login />
+      <LoginInputs />
   );
 }
 

@@ -1,7 +1,8 @@
 import { EnterOrSendButton } from '../EnterOrSendButton/EnterOrSendButton.js';
 import './LoginInputs.css'
 
-export function Login() {
+
+export const LoginInputs = () => {
   return (
     <main className="login-content">
       <div className="img-div">

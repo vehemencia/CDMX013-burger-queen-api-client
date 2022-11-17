@@ -1,4 +1,4 @@
 import './EnterOrSendButton.css'
-export function EnterOrSendButton(Text) {
+export const EnterOrSendButton = (Text) => {
   return <button type="button" className="enter-or-send-button">{Text}</button>;
 }
