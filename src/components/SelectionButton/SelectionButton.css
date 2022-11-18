@@ -1,0 +1,16 @@
+.selection-button{
+    background-color: #805633;
+    margin-top: 1.2rem;
+    width: 18.1rem;
+    height: 4.95rem;
+    font-size: 2.8rem;
+    border-radius: 1rem;
+    border: none;
+    color: #ffffff;
+}
+
+.selection-button:active{
+    background-color: #6A4627;
+    border-color: #CA965C;
+    border-width: 2rem;
+}

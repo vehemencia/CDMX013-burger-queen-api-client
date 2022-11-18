@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'C:/Users/Maria A. Ramirez/Documents/Laboratoria/Proyecto 5/CDMX013-burger-queen-api-client/src/index.css';
+import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
