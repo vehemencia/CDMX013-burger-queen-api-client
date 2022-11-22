@@ -45,11 +45,13 @@
     gap: 2rem;
     justify-content: center;
 }
+
 .table-number-section{
     width: 30%;
     height: 8.4rem;
+    margin-left: 2.5rem;
     font-size: 2.8rem;
-    /*background-color: hotpink;*/
+    background-color: hotpink;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -68,4 +70,24 @@
 
 #table-num{
     font-size: 2.8rem;
+}
+
+.products-and-ticket{
+    display: flex;
+    width: 100%;
+    height: 65vh;
+}
+
+.product-list{
+    height: 100%;
+    width: 60%;
+    background-color: blueviolet;
+}
+
+.ticket-with-order-div {
+    display: flex;
+    height: 100%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
 }
