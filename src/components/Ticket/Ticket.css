@@ -1,8 +1,10 @@
 .ticket-with-client-order {
-    width: 33.8rem;
+    width: 34rem;
     height: 47rem;
     background-color: #BACBA9;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .waitress-name {
@@ -23,30 +25,18 @@
     text-align: center;
 }
 
-#quantity-text{
-    margin-left: -30rem;
-}
-
 .order-in-ticket {
     width: auto;
-}
-
-.q-of-products {
-    width: auto;
-}
-
-.product-name {
-    width: auto;
-}
-
-.cost-of-products {
-    width: auto;
-}
-
-.delete-from-order {
-    width: auto;
+    height: 35rem;
+    display: flex;
 }
 
 .total-cost {
     width: auto;
+    margin-top: 1rem;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 1.7rem;
+    color: #000000;
+    text-align: right;
+    margin-right: 1rem;
 }
