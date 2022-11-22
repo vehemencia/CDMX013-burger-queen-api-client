@@ -19,9 +19,9 @@ export const OrderMenu = () => {
       </section>
       <section className="products-and-ticket">
         <div className="product-list">
-        {Ticket()}
         </div>
         <div className="ticket-with-order-div">
+        {Ticket()}
         </div>
       </section>
       <footer className="footer-with-elements"></footer>

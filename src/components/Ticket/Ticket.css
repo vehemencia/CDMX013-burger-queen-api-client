@@ -3,4 +3,39 @@
     height: 47rem;
     background-color: #BACBA9;
     border-radius: 1rem;
+    color: #000000;
+    font-size: 100rem;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+.waitress-name{
+width: auto;
+}
+
+.ticket-section{
+    width: auto;
+}
+
+.order-in-ticket{
+    width: auto;
+}
+
+q-of-products{
+    width: auto;
+}
+
+.product-name{
+    width: auto;
+}
+
+.cost-of-products{
+    width: auto;
+}
+
+.delete-from-order{
+    width: auto;
+}
+
+.total-cost{
+    width: auto;
 }
