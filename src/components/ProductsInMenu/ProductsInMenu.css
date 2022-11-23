@@ -1,0 +1,10 @@
+.individual-product{
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-counter{
+    display: flex;
+    width: 13.6rem;
+    justify-content: space-around;
+}

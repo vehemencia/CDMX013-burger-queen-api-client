@@ -1,6 +1,7 @@
 import './OrderMenu.css';
 import { Ticket } from '../Ticket/Ticket';
-import { SelectionButton } from '../SelectionButton/SelectionButton.js'
+import { SelectionButton } from '../SelectionButton/SelectionButton.js';
+import { ProductsInMenu } from '../ProductsInMenu/ProductsInMenu';
 
 export const OrderMenu = () => {
   return (
@@ -19,6 +20,7 @@ export const OrderMenu = () => {
       </section>
       <section className="products-and-ticket">
         <div className="product-list">
+          {ProductsInMenu()}
         </div>
         <div className="ticket-with-order-div">
         {Ticket()}
