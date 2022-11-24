@@ -8,9 +8,9 @@ export const AdminSelection = () => {
         <img src="https://iili.io/H9lsuOx.png" id="logo-img" alt="logo"/>
       </div>
       <div className="inputs-div">
-      {ActivitiesButton('Agrega un usuario')}
-      {ActivitiesButton('Edita un usuario')}
-      {ActivitiesButton('Elimina un usuario')}
+      <ActivitiesButton buttonText='Crea un usuario'/>
+      <ActivitiesButton buttonText='Edita un usuario'/>
+      <ActivitiesButton buttonText='Elimina un usuario'/>
       </div>
     </main>
   );
