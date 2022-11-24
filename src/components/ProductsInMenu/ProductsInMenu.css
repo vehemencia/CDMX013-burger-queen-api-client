@@ -1,10 +1,23 @@
 .individual-product{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.name-of-product, .price-of-product{
+    font-size: 2.8rem;
+    height: auto;
+}
+
+.name-of-product{
+    margin-left: 8.4rem;
+    width: 35%;
 }
 
 .product-counter{
     display: flex;
     width: 13.6rem;
     justify-content: space-around;
+    align-items: center;
 }

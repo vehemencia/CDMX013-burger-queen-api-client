@@ -16,7 +16,6 @@
 .header-menu-display{
     height: 9.6rem;
     width: 100%;
-    /*background-color: blueviolet;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +27,6 @@
 }
 
 .menu-and-table-section{
-    /*background-color: greenyellow;*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -38,7 +36,6 @@
 .food-selection{
     width: 50%;
     height: 8.4rem;
-    /*background-color: coral;*/
     display: flex;
     align-items: center;
     margin-left: -10rem ;
@@ -79,9 +76,12 @@
 }
 
 .product-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
     width: 60%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
 .ticket-with-order-div {
