@@ -1,11 +1,11 @@
-import './OrderMenu.css';
 import { Ticket } from '../Ticket/Ticket';
 import { SelectionButton } from '../SelectionButton/SelectionButton.js';
 import { ProductsInMenu } from '../ProductsInMenu/ProductsInMenu';
+import style from './OrderMenu.css'
 
 export const OrderMenu = () => {
   return (
-    <main className="menu-display">
+    <main className={style.menuDisplay}>
       <header className="header-menu-display">
         <img src="https://iili.io/H9lsuOx.png" id="logo-img" alt="logo" />
       </header>

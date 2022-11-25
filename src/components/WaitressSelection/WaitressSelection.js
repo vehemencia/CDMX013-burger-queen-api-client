@@ -8,8 +8,8 @@ export const WaitressSelection = () => {
         <img src="https://iili.io/H9lsuOx.png" id="logo-img" alt="logo"/>
       </div>
       <div className="inputs-div">
-      {ActivitiesButton('Crea una orden')}
-      {ActivitiesButton('Entrega una orden')}
+      <ActivitiesButton buttonText='Crea una orden'/>
+      <ActivitiesButton buttonText='Entrega una orden'/>
       </div>
     </main>
   );
