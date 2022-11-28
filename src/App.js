@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <WaitressSelection/>,
   },
   {
-    path: "/meseros/crear-orden",
+    path: "meseros/crear-orden",
     element: <OrderMenu/>,
   },
 ]);

@@ -20,9 +20,7 @@ export const OrderMenu = () => {
       </section>
       <section className="products-and-ticket">
         <div className="product-list">
-          {ProductsInMenu('Pan de muerto')}
-          {ProductsInMenu('Pastel de red velvet')}
-          {ProductsInMenu('Tarta de cereza')}
+          <ProductsInMenu/>
         </div>
         <div className="ticket-with-order-div">
         {Ticket()}
