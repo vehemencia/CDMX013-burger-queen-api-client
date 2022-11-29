@@ -13,8 +13,8 @@ export const ProductsInMenu = () => {
     product.map(products => 
       <div className="individual-product" key={products.id}>
     <div className="name-of-product">{products.name}</div>
-    <div className="price-of-product">{products.price}</div>
-    <div className="product-counter">{CounterForMenu()}</div>
+    <div className="price-of-product">${products.price}</div>
+    <div className="product-counter"><CounterForMenu/></div>
     </div>)
   )
 }
