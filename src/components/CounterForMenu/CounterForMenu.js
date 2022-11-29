@@ -1,15 +1,12 @@
 import './CounterForMenu.css';
-import { Fragment } from 'react';
-
-//let quantityOfProducts = 0;
-// function increment(){
-//   quantityOfProducts++
-// }
+import { Fragment, useState } from 'react';
 
 export const CounterForMenu = () => {
+  const [count, setCount] = useState(0);
+  console.log(count)
   return (<Fragment>
-    <button className='minus-button'>-</button>
-    <input className='counter-input' type='number' value='0'></input>
-    <button className='plus-button' >+</button>
+    <button className='minus-button' onClick={() => setCount(count-1)}>-</button>
+    <input className='counter-input' defaultValue={count}/>
+    <button className='plus-button' onClick={() => setCount(count+1)}>+</button>
   </Fragment>)
 }
