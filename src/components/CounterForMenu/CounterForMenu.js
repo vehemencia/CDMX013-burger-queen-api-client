@@ -6,7 +6,7 @@ export const CounterForMenu = () => {
   console.log(count)
   return (<Fragment>
     <button className='minus-button' onClick={() => setCount(count-1)}>-</button>
-    <input className='counter-input' defaultValue={count}/>
+    <input className='counter-input' value={count}/>
     <button className='plus-button' onClick={() => setCount(count+1)}>+</button>
   </Fragment>)
 }
