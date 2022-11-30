@@ -14,3 +14,7 @@
     border-color: #CA965C;
     border-width: 2rem;
 }
+
+.selection-button:focus{
+    background-color: #523113;
+}

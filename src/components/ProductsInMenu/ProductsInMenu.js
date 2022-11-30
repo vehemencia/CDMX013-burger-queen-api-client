@@ -9,12 +9,15 @@ export const ProductsInMenu = () => {
       .then(response => response.json())
       .then(json => setProducts(json))
   }, [])
-  return (
-    product.map(products => 
-      <div className="individual-product" key={products.id}>
-    <div className="name-of-product">{products.name}</div>
-    <div className="price-of-product">${products.price}</div>
-    <div className="product-counter"><CounterForMenu/></div>
-    </div>)
-  )
+  if (product == product) {
+    const foodProducts = product.filter(individualProduct => individualProduct.type === 'alimentos')
+    return (
+      foodProducts.map(products =>
+        <div className="individual-product" key={products.id}>
+          <div className="name-of-product">{products.name}</div>
+          <div className="price-of-product">${products.price}</div>
+          <div className="product-counter"><CounterForMenu /></div>
+        </div>)
+    )
+  }
 }

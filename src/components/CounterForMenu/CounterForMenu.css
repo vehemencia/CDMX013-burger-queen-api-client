@@ -27,6 +27,11 @@
     height: 3.5rem;
 }
 
+.minus-button:active,
+.plus-button:active{
+    background-color: #edaf7bb5;
+}
+
 input[type='number'] {
     -moz-appearance:textfield;
 }

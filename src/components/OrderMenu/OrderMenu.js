@@ -3,8 +3,10 @@ import { SelectionButton } from '../SelectionButton/SelectionButton.js';
 import { ProductsInMenu } from '../ProductsInMenu/ProductsInMenu';
 import { EnterOrSendButton } from '../EnterOrSendButton/EnterOrSendButton';
 import './OrderMenu.css'
+//import { useState } from 'react';
 
 export const OrderMenu = () => {
+  //const [isActive, setIsActive] = useState(true);
   return (
     <main className='menuDisplay'>
       <header className='header-menu-display'>
@@ -12,7 +14,7 @@ export const OrderMenu = () => {
       </header>
       <section className='menu-and-table-section'>
         <div className='food-selection'>
-          <SelectionButton menuOption='Alimentos'/>
+          <SelectionButton autoFocus menuOption='Alimentos'/>
           <SelectionButton menuOption='Bebidas'/>
         </div>
         <div className='table-number-section'>
