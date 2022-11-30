@@ -14,7 +14,7 @@ export const OrderMenu = () => {
       </header>
       <section className='menu-and-table-section'>
         <div className='food-selection'>
-          <SelectionButton autoFocus menuOption='Alimentos'/>
+          <SelectionButton menuOption='Alimentos'/>
           <SelectionButton menuOption='Bebidas'/>
         </div>
         <div className='table-number-section'>

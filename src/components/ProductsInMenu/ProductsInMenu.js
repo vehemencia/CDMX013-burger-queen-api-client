@@ -10,7 +10,17 @@ export const ProductsInMenu = () => {
       .then(json => setProducts(json))
   }, [])
   if (product == product) {
-    const foodProducts = product.filter(individualProduct => individualProduct.type === 'alimentos')
+    const foodProducts = product.filter(individualProduct => individualProduct.type === 'bebidas')
+    return (
+      foodProducts.map(products =>
+        <div className="individual-product" key={products.id}>
+          <div className="name-of-product">{products.name}</div>
+          <div className="price-of-product">${products.price}</div>
+          <div className="product-counter"><CounterForMenu /></div>
+        </div>)
+    )
+  } else if (product === product) {
+    const foodProducts = product.filter(individualProduct => individualProduct.type === 'bebidass')
     return (
       foodProducts.map(products =>
         <div className="individual-product" key={products.id}>

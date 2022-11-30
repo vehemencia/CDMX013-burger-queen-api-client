@@ -13,7 +13,7 @@ export const LoginInputs = () => {
         <input className='login-input' type='email'></input>
         <h3 className='login-label'>Contraseña</h3>
         <input className='login-input' type='password'></input>
-        {[EnterOrSendButton('ENTRAR')]}
+        <EnterOrSendButton buttonText='ENTRAR'/>
       </div>
     </main>
   );
