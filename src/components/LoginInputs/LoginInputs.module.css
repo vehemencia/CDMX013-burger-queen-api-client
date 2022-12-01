@@ -1,4 +1,4 @@
-.login-content {
+.loginContent {
     height: 100%;
     width: 100%;
     display: flex;
@@ -8,12 +8,12 @@
     gap: 10rem;
 }
 
-#logo-img {
+#logoImg {
     width: 36rem;
     height: auto;
 }
 
-.inputs-div {
+.inputsDiv {
     height: 100%;
     width: 50%;
     display: flex;
@@ -21,20 +21,20 @@
     text-align: center;
 }
 
-.img-div {
+.imgDiv {
     height: 100%;
     width: 50%;
 }
 
-#login-text {
+#loginText {
     font-size: 4.5rem;
 }
 
-.login-label {
+.loginLabel {
     font-size: 2.4rem;
 }
 
-.login-input{
+.loginInput{
     background-color: #97663F;
     border-color: transparent transparent #ffffff;
     border-bottom-width: 0.1rem;
