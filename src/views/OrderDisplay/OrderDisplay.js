@@ -1,11 +1,10 @@
-import { Ticket } from '../Ticket/Ticket';
-import { SelectionButton } from '../SelectionButton/SelectionButton.js';
-import { ProductsInMenu } from '../ProductsInMenu/ProductsInMenu';
-import { EnterOrSendButton } from '../EnterOrSendButton/EnterOrSendButton';
-import './OrderMenu.css'
-//import { useState } from 'react';
+import { SelectionButton } from '../../components/SelectionButton/SelectionButton.js';
+import { ProductsInMenu } from '../../components/ProductsInMenu/ProductsInMenu.js';
+import { EnterOrSendButton } from '../../components/EnterOrSendButton/EnterOrSendButton.js';
+import { Ticket } from '../../components/Ticket/Ticket.js';
+import './OrderDisplay.css'
 
-export const OrderMenu = () => {
+export const OrderDisplay = () => {
   //const [isActive, setIsActive] = useState(true);
   return (
     <main className='menuDisplay'>

@@ -1,23 +1,21 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//import { Routes, Route } from "react-router-dom";
-import { LoginInputs } from './components/LoginInputs/LoginInputs.js';
-//import { WaitressSelection } from './components/WaitressSelection/WaitressSelection.js'
-//import { OrderMenu } from './components/OrderMenu/OrderMenu.js';
-//import { AdminSelection } from './components/AdminSelection/AdminSelection.js'
+import { LoginDisplay } from './views/LoginDisplay/LoginDisplay.js';
+import { WaitressSelection } from './views/WaitressSelection/WaitressSelection.js'
+import { OrderDisplay } from './views/OrderDisplay/OrderDisplay.js';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LoginInputs/>,
+    element: <LoginDisplay/>,
   },
-  // {
-  //   path: "/meseros",
-  //   element: <WaitressSelection/>,
-  // },
-  // {
-  //   path: "/meseros/crear-orden",
-  //   element: <OrderMenu/>,
-  // },
+  {
+    path: "/meseros",
+    element: <WaitressSelection/>,
+  },
+  {
+    path: "/meseros/crear-orden",
+    element: <OrderDisplay/>,
+  },
 ]);
 
 function App() {
