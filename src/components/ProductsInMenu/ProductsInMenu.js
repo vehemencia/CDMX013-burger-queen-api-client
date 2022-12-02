@@ -2,7 +2,7 @@ import './ProductsInMenu.css';
 import { CounterForMenu } from '../CounterForMenu/CounterForMenu';
 import { useState, useEffect } from 'react';
 
-export const ProductsInMenu = (ourValue, ourFunction) => {
+export const ProductsInMenu = ({value, addOrRemoveProduct}) => {
   const [product, setProducts] = useState([])
   useEffect(() => {
     fetch('https://6384dd913fa7acb14f032122.mockapi.io/product')
@@ -16,7 +16,7 @@ export const ProductsInMenu = (ourValue, ourFunction) => {
         <div className="individual-product" key={products.id}>
           <div className="name-of-product">{products.name}</div>
           <div className="price-of-product">${products.price}</div>
-          <div className="product-counter"><CounterForMenu value={ourValue} onChange={ourFunction}/></div>
+          <div className="product-counter"><CounterForMenu value={value} addOrRemoveProduct={addOrRemoveProduct}/></div>
         </div>)
     )
   } else if (product === product) {
@@ -26,7 +26,7 @@ export const ProductsInMenu = (ourValue, ourFunction) => {
         <div className="individual-product" key={products.id}>
           <div className="name-of-product">{products.name}</div>
           <div className="price-of-product">${products.price}</div>
-          <div className="product-counter"><CounterForMenu /></div>
+          <div className="product-counter"><CounterForMenu value={value} addOrRemoveProduct={addOrRemoveProduct}/></div>
         </div>)
     )
   }

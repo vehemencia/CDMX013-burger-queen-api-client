@@ -13,7 +13,7 @@ export const OrderDisplay = () => {
       setProductQuantity(productQuantity > 0 ? productQuantity - 1 : 0)
     } else setProductQuantity(productQuantity + 1)
   }
-  
+  console.log(productQuantity)
   return (
     <main className='menuDisplay'>
       <header className='header-menu-display'>
@@ -30,7 +30,7 @@ export const OrderDisplay = () => {
       </section>
       <section className='products-and-ticket'>
         <div className='product-list'>
-          <ProductsInMenu value={productQuantity} onChange={() => addOrRemoveProduct()} />
+          <ProductsInMenu value={productQuantity} addOrRemoveProduct={addOrRemoveProduct} />
         </div>
         <div className='ticket-with-order-div'>
           <Ticket/>
