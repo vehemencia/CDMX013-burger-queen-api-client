@@ -3,9 +3,17 @@ import { ProductsInMenu } from '../../components/ProductsInMenu/ProductsInMenu.j
 import { EnterOrSendButton } from '../../components/EnterOrSendButton/EnterOrSendButton.js';
 import { Ticket } from '../../components/Ticket/Ticket.js';
 import './OrderDisplay.css'
+import { useState } from 'react';
 
 export const OrderDisplay = () => {
-  //const [isActive, setIsActive] = useState(true);
+  const [productQuantity, setProductQuantity] = useState(0);
+
+  function addOrRemoveProduct(typeOfClass){
+    if (typeOfClass === 'minus-button'){
+      setProductQuantity(productQuantity > 0 ? productQuantity - 1 : 0)
+    } else setProductQuantity(productQuantity + 1)
+  }
+  
   return (
     <main className='menuDisplay'>
       <header className='header-menu-display'>
@@ -22,7 +30,7 @@ export const OrderDisplay = () => {
       </section>
       <section className='products-and-ticket'>
         <div className='product-list'>
-          <ProductsInMenu />
+          <ProductsInMenu value={productQuantity} onChange={() => addOrRemoveProduct()} />
         </div>
         <div className='ticket-with-order-div'>
           <Ticket/>

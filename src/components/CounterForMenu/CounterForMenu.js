@@ -1,12 +1,10 @@
 import './CounterForMenu.css';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 
-export const CounterForMenu = () => {
-  const [count, setCount] = useState(0);
-  console.log(count)
+export const CounterForMenu = (finalValue, finalFunction) => {
   return (<Fragment>
-    <button className='minus-button' onClick={() => setCount(count > 0 ? count - 1 : 0)}>-</button>
-    <input className='counter-input' value={count} onChange={setCount}/>
-    <button className='plus-button' onClick={() => setCount(count + 1)}>+</button>
+    <button className='minus-button' onClick={finalFunction}>-</button>
+    <input className='counter-input' value={finalValue}/>
+    <button className='plus-button' onClick={finalFunction}>+</button>
   </Fragment>)
 }
