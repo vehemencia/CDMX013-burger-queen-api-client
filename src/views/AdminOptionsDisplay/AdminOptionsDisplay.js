@@ -1,7 +1,7 @@
-import { ActivitiesButton } from '../ActivitiesButton/ActivitiesButton.js';
-import './AdminSelection.css'
+import { ActivitiesButton } from '../../components/ActivitiesButton/ActivitiesButton.js';
+import './AdminOptionsDisplay.css'
 
-export const AdminSelection = () => {
+export const AdminOptionsDisplay = () => {
   return (
     <main className="admin-content">
       <div className="img-div">
@@ -11,6 +11,8 @@ export const AdminSelection = () => {
       <ActivitiesButton buttonText='Crea un usuario'/>
       <ActivitiesButton buttonText='Edita un usuario'/>
       <ActivitiesButton buttonText='Elimina un usuario'/>
+      <ActivitiesButton buttonText='Agrega un producto'/>
+      <ActivitiesButton buttonText='Elimina un producto'/>
       </div>
     </main>
   );

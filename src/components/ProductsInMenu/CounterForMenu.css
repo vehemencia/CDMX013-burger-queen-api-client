@@ -18,12 +18,18 @@
     background-color: #C28E64;
     font-size: 3rem;
     text-align: center;
+    width: 4.5rem;
 }
 
 .counter-individual-part{
     width: 13.6rem;
     display: flex;
     height: 3.5rem;
+}
+
+.minus-button:active,
+.plus-button:active{
+    background-color: #edaf7bb5;
 }
 
 input[type='number'] {
