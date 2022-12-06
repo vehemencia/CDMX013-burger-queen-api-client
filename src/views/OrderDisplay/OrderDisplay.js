@@ -14,6 +14,8 @@ export const OrderDisplay = () => {
       .then(json => setListOfProducts(json))
   }, [])
 
+
+
   function addOrRemoveProduct(typeOfClass) {
     if (typeOfClass === 'minus-button') {
       //setProductQuantity(productQuantity > 0 ? productQuantity - 1 : 0)
@@ -51,7 +53,6 @@ export const OrderDisplay = () => {
   )
 }
 
-  // const [order, setOrder] = useState([]);
 
   // {Product: 'Pan de muerto',
   // Quantity: 1,
@@ -62,8 +63,3 @@ export const OrderDisplay = () => {
   // Price: 30,
   // Payment: Price * Quantity}
 
-  // const [productQuantity, setProductQuantity] = useState(0);
-
-  // fetch('https://6384dd913fa7acb14f032122.mockapi.io/product')
-  //   .then(response => response.json())
-  //   .then(json => console.log(json))
