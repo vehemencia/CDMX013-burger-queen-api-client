@@ -2,25 +2,17 @@ import { SelectionButton } from '../../components/SelectionButton/SelectionButto
 import { ProductsInMenu } from '../../components/ProductsInMenu/ProductsInMenu.js';
 import { EnterOrSendButton } from '../../components/EnterOrSendButton/EnterOrSendButton.js';
 import { Ticket } from '../../components/Ticket/Ticket.js';
-import './OrderDisplay.css'
-//import { useState } from 'react';
+import './OrderDisplay.css';
+import { useEffect, useState } from 'react';
 
 export const OrderDisplay = () => {
-
-  //const [order, setOrder] = useState([]);
-  /*
-  {Product: 'Pan de muerto',
-  Quantity: 1,
-  Price: 50
-  Payment: Price * Quantity},
-  {Product: 'Pay de limon',
-  Quantity: 3,
-  Price: 30,
-  Payment: Price * Quantity}
-
-  */
-
-  // const [productQuantity, setProductQuantity] = useState(0);
+  const [listOfProducts, setListOfProducts] = useState([]);
+  console.log(listOfProducts)
+  useEffect(() => {
+    fetch('https://6384dd913fa7acb14f032122.mockapi.io/product')
+      .then(response => response.json())
+      .then(json => setListOfProducts(json))
+  }, [])
 
   function addOrRemoveProduct(typeOfClass) {
     if (typeOfClass === 'minus-button') {
@@ -29,8 +21,6 @@ export const OrderDisplay = () => {
     } else console.log('Presionaste +')
     //setProductQuantity(productQuantity + 1)
   }
-
-  //console.log(productQuantity)
 
   return (
     <main className='menuDisplay'>
@@ -48,7 +38,7 @@ export const OrderDisplay = () => {
       </section>
       <section className='products-and-ticket'>
         <div className='product-list'>
-          <ProductsInMenu addOrRemoveProduct={addOrRemoveProduct}/>
+          <ProductsInMenu addOrRemoveProduct={addOrRemoveProduct} data={listOfProducts}/>
         </div>
         <div className='ticket-with-order-div'>
           <Ticket />
@@ -60,3 +50,20 @@ export const OrderDisplay = () => {
     </main>
   )
 }
+
+  // const [order, setOrder] = useState([]);
+
+  // {Product: 'Pan de muerto',
+  // Quantity: 1,
+  // Price: 50
+  // Payment: Price * Quantity},
+  // {Product: 'Pay de limon',
+  // Quantity: 3,
+  // Price: 30,
+  // Payment: Price * Quantity}
+
+  // const [productQuantity, setProductQuantity] = useState(0);
+
+  // fetch('https://6384dd913fa7acb14f032122.mockapi.io/product')
+  //   .then(response => response.json())
+  //   .then(json => console.log(json))
