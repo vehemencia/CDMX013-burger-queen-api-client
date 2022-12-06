@@ -7,21 +7,30 @@ import { useEffect, useState } from 'react';
 
 export const OrderDisplay = () => {
   const [listOfProducts, setListOfProducts] = useState([]);
-  console.log(listOfProducts)
   useEffect(() => {
     fetch('https://6384dd913fa7acb14f032122.mockapi.io/product')
       .then(response => response.json())
       .then(json => setListOfProducts(json))
   }, [])
+  
+  const testArray = [];
+  const quantityInZeros = [{quant: 3}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}];
 
+  for (let i = 0; i < listOfProducts.length; i++){
+    testArray.push(Object.assign(listOfProducts[i], quantityInZeros[i]))
+  }
 
+  console.log(testArray)
 
-  function addOrRemoveProduct(typeOfClass) {
-    if (typeOfClass === 'minus-button') {
-      //setProductQuantity(productQuantity > 0 ? productQuantity - 1 : 0)
-      console.log('Presionaste -')
-    } else console.log('Presionaste +')
-    //setProductQuantity(productQuantity + 1)
+  function addOrRemoveProduct(typeOfClass, productKey) {
+    console.log(productKey)
+    if (typeOfClass === 'minus-button' && productKey === productKey) {
+     productKey.quant = productKey.quant - 1
+      console.log(productKey.quant)
+    } if (typeOfClass === 'plus-button' && productKey === productKey) {
+      //setQuantity(quantity + 1)
+      productKey.quant = productKey.quant + 1
+    }
   }
 
   return (
@@ -40,7 +49,7 @@ export const OrderDisplay = () => {
       </section>
       <section className='products-and-ticket'>
         <div className='product-list'>
-          <ProductsInMenu addOrRemoveProduct={addOrRemoveProduct} data={listOfProducts}/>
+          <ProductsInMenu addOrRemoveProduct={addOrRemoveProduct} data={testArray} />
         </div>
         <div className='ticket-with-order-div'>
           <Ticket />
