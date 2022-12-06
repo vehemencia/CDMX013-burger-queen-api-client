@@ -14,22 +14,21 @@ export const OrderDisplay = () => {
   }, [])
   
   const testArray = [];
-  const quantityInZeros = [{quant: 3}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}];
+  const quantityInZeros = [{quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}, {quant: 0}];
 
   for (let i = 0; i < listOfProducts.length; i++){
     testArray.push(Object.assign(listOfProducts[i], quantityInZeros[i]))
   }
 
-  console.log(testArray)
-
   function addOrRemoveProduct(typeOfClass, productKey) {
     console.log(productKey)
     if (typeOfClass === 'minus-button' && productKey === productKey) {
-     productKey.quant = productKey.quant - 1
-      console.log(productKey.quant)
+     //productKey.quant = productKey.quant - 1
+      console.log('Presionaste -')
     } if (typeOfClass === 'plus-button' && productKey === productKey) {
       //setQuantity(quantity + 1)
-      productKey.quant = productKey.quant + 1
+      // productKey.quant = productKey.quant + 1
+      console.log('Presionaste +')
     }
   }
 
