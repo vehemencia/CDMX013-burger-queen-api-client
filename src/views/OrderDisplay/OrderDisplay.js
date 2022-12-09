@@ -6,17 +6,21 @@ import './OrderDisplay.css';
 import { useEffect, useState } from 'react';
 
 export const OrderDisplay = () => {
+  
+  let initialOrder = {
+    table: '',
+    waiter: '',
+    items: []
+  }
 
-  // const [order, setOrder] = useState({
-  //   table: '',
-  //   waiter: '',
-  //   items: []
-  // })
+  const exampleToAppend = ':3';
 
+  const [order, setOrder] = useState(initialOrder)
 
-//   const handleAddItem = (item) => {
-//     setOrder((state) => {...state, items: [...state.items, item]})
-// }
+  const handleAddItem = (item) => {
+    setOrder((state) => )
+    console.log(typeof order, order)
+}
 
 const [listOfProducts, setListOfProducts] = useState([]);
 
@@ -42,7 +46,7 @@ return (
     </section>
     <section className='products-and-ticket'>
       <div className='product-list'>
-        <ProductsInMenu data={listOfProducts}/>
+        <ProductsInMenu data={listOfProducts} handleAddItem={handleAddItem}/>
       </div>
       <div className='ticket-with-order-div'>
         <Ticket />
@@ -65,3 +69,6 @@ return (
   // Price: 30,
   // Payment: Price * Quantity}
 
+// [...state, ...initialOrder, {items: exampleToAppend}]
+
+// const newData = { products: dishSelected, client: clientName, dateEntry: date, userId: activeUser, status: "pending" }

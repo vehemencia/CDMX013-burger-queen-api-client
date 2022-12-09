@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export default function ProductItem() {
-  const [productQuantity, setProductQuantity] = useState(0)
+  const [productQuantity, setProductQuantity] = useState(0);
   useEffect(() => {
     console.log('modifique quantity');
   }, [productQuantity])
