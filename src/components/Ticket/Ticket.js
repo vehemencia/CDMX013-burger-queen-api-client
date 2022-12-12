@@ -7,7 +7,7 @@ export const Ticket = ({order}) => {
       <div className="waitress-name">Atiende: </div>
       <div className="ticket-section">Cant. &nbsp;Producto &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Costo</div>
       <div className="order-in-ticket">
-      {OrderInformation({order})}
+      <OrderInformation order={order}/>
       </div>
       <div className="total-cost">Total: $30</div>
     </div>
