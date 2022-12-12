@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 
-export default function ProductItem() {
+export default function ProductItem({handleAddItem, individualProduct}) {
   const [productQuantity, setProductQuantity] = useState(0);
   useEffect(() => {
     console.log('modifique quantity');
+    handleAddItem({quantity:productQuantity, product: individualProduct})
   }, [productQuantity])
   
   const handleQuantity = (typeOfOperation) => {

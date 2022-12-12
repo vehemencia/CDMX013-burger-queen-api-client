@@ -1,12 +1,14 @@
 import './OrderInformation.css';
 
-export const OrderInformation = () => {
+export const OrderInformation = ({order}) => {
   return (
-    <div className="selected-product-in-order">
+    order.map(selectedProduct => 
+      <div className="selected-product-in-order" key={selectedProduct.id}>
       <div className="q-of-products"></div>
       <div className="product-name"></div>
       <div className="cost-of-products">$</div>
       <div className="delete-from-order"><img className="img-delete-product" src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"/></div>
     </div>
+      )
   )
 }
