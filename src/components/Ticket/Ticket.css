@@ -30,6 +30,7 @@
     height: 35rem;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .total-cost {

@@ -16,9 +16,14 @@ export const OrderDisplay = () => {
   const [order, setOrder] = useState(initialOrder)
 
   const handleAddItem = (item) => {
-    //setOrder((state)=>({...state, items:[...(state.items), item]}))
-    setOrder((state)=>({...state, items:[...(state.items), item]}))
-    console.log(order)
+    setOrder((state) => {
+      const newOrder = {...state.items}.map(itemFromOrder => {
+        if (itemFromOrder.product.name === item.product.name) {
+          return item
+        }
+        return itemFromOrder
+      }) ({...state, items:[...(state.items), newOrder]})
+    })
   }
 
   const [listOfProducts, setListOfProducts] = useState([]);
@@ -48,7 +53,7 @@ export const OrderDisplay = () => {
           <ProductsInMenu data={listOfProducts} handleAddItem={handleAddItem} />
         </div>
         <div className='ticket-with-order-div'>
-          <Ticket order={order}/>
+          <Ticket order={order} />
         </div>
       </section>
       <footer className='footer-with-elements'>
@@ -57,17 +62,3 @@ export const OrderDisplay = () => {
     </main>
   )
 }
-
-
-  // {Product: 'Pan de muerto',
-  // Quantity: 1,
-  // Price: 50
-  // Payment: Price * Quantity},
-  // {Product: 'Pay de limon',
-  // Quantity: 3,
-  // Price: 30,
-  // Payment: Price * Quantity}
-
-// [...state, ...initialOrder, {items: exampleToAppend}]
-
-// const newData = { products: dishSelected, client: clientName, dateEntry: date, userId: activeUser, status: "pending" }
