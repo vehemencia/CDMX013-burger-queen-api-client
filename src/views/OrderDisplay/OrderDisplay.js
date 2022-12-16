@@ -17,13 +17,31 @@ export const OrderDisplay = () => {
 
   const handleAddItem = (item) => {
     setOrder((state) => {
-      const newOrder = {...state.items}.map(itemFromOrder => {
-        if (itemFromOrder.product.name === item.product.name) {
-          return item
-        }
-        return itemFromOrder
-      }) ({...state, items:[...(state.items), newOrder]})
+       //console.log(state.items.length)
+       //console.log(initialOrder.items.length)
+       if (state.items.length === 0) {
+        return ({ ...state, items: [...(state.items), item] })
+      } 
+      else {
+        const newOrder = state.items.map(itemFromOrder => {
+          if (itemFromOrder.product.name === item.product.name) {
+            return item
+          }
+          return itemFromOrder
+        })
+        return ({ ...state, items: newOrder })
+      }
     })
+
+    //   const newOrder = state.items.map(itemFromOrder => {
+    //     if (itemFromOrder.product.name === item.product.name) {
+    //       return item
+    //     }
+    //     return itemFromOrder
+    //   }) 
+    //   console.log(newOrder)
+    //  return ({...state, items:[newOrder]})
+    // })
   }
 
   const [listOfProducts, setListOfProducts] = useState([]);
